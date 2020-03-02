@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <base href="./">
+  <title>TOP PV INSURANCE</title>
+  <meta name="robots" content="noindex">
+  <meta name="robots" content="nofollow">
+  <link href="slides.min.css" rel="stylesheet" type="text/css">
+  <link href="flipdown.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="slides animated noPreload">
+
+  <section class="slide fade-5 kenBurns" >
+    <div class="content">
+      <div class="container">
+        <div class="wrap">
+
+          <div class="fix-5-12">
+            <!-- <div class="ae-1"><p class="larger light margin-bottom-1 opacity-8">At a glance</p></div> -->
+            <h2 class="large margin-bottom-2 ae-1">Coming soon...</h2>
+            <ul class="list medium ae-2 opacity-8">
+              <li class="ae-3 bold">BUY YOUR TOP PV INSURANCE ONLINE</li>              
+            </ul>
+            <div id="flipdown" class="ae-5 margin-top-2 flipdown flipdown__theme-light  "></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="background" style="background-image:url(countdown-homepage-background.jpg)"></div>
+
+  </section>
+
+  <script src="jquery.min.js"></script>
+  <script src="slides.min.js"></script> 
+  <script src="flipdown.js"></script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    var specifiedTime = new Date("March 17, 2020 09:00:00");
+    var specifiedTimeSeconds = specifiedTime.getTime() / 1000; 
+
+    // Unix timestamp (in seconds) to count down to
+    // var specifiedTimeSeconds = (new Date().getTime() / 1000) + (24*60*60 * 2) + 1;
+    
+    // Set up FlipDown
+    var flipdown = new FlipDown(specifiedTimeSeconds)
+
+      // Start the countdown
+      .start()
+
+      // Do something when the countdown ends
+      .ifEnded(() => {
+        console.log('The countdown has ended!');
+      });
+
+    // Toggle theme
+    /*
+    var interval = setInterval(() => {
+      let body = document.body;
+      body.classList.toggle('light-theme');
+      body.querySelector('#flipdown').classList.toggle('flipdown__theme-dark');
+      body.querySelector('#flipdown').classList.toggle('flipdown__theme-light');
+    }, 5000);
+    */ 
+    var ver = document.getElementById('ver');
+    ver.innerHTML = flipdown.version;
+  });
+  </script>
+
+</body>
+
+</html>
