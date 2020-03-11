@@ -44,9 +44,10 @@
   <script>
   document.addEventListener('DOMContentLoaded', () => {
 
-    var specifiedTime = new Date("March 17, 2020 09:00:00");
-    var specifiedTimeSeconds = specifiedTime.getTime() / 1000; 
-
+    //var specifiedTime = new Date("March 17, 2020 09:00:00");
+    //var specifiedTimeSeconds = specifiedTime.getTime() / 1000; 
+    var specifiedTimeSeconds = 1584518400;
+    
     // Unix timestamp (in seconds) to count down to
     // var specifiedTimeSeconds = (new Date().getTime() / 1000) + (24*60*60 * 2) + 1;
     
@@ -70,8 +71,8 @@
       body.querySelector('#flipdown').classList.toggle('flipdown__theme-light');
     }, 5000);
     */ 
-    var ver = document.getElementById('ver');
-    ver.innerHTML = flipdown.version;
+    // var ver = document.getElementById('ver');
+    // ver.innerHTML = flipdown.version;
   });
   </script>
 
